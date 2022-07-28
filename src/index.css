@@ -44,6 +44,10 @@ code {
   }
 }
 
+.center {
+  text-align: center;
+}
+
 .edit {
   cursor: pointer;
   color: green;

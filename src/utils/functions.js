@@ -1,5 +1,12 @@
 import firebase from './firebase';
-import { getDatabase, onValue, push, ref, set } from 'firebase/database';
+import {
+  getDatabase,
+  onValue,
+  push,
+  ref,
+  remove,
+  set,
+} from 'firebase/database';
 import { useEffect, useState } from 'react';
 
 export const AddUser = info => {
@@ -31,4 +38,9 @@ export const useFetch = () => {
     });
   }, []);
   return { isLoading, contactList };
+};
+
+export const DeleteUser = id => {
+  const db = getDatabase(firebase);
+  remove(ref(db, 'users/' + id));
 };
