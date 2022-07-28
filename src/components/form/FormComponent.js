@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from '@mui/icons-material';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 
-const FormComponent = ({ info, setInfo }) => {
+const FormComponent = ({ info, setInfo, handleSubmit }) => {
   const handleChange = e => {
     e.preventDefault();
     // const name = e.target.name;
@@ -27,28 +27,28 @@ const FormComponent = ({ info, setInfo }) => {
   return (
     <div>
       <Grid
-        textAlign="center"
-        verticalAlign="middle"
+        container
+        alignItems="center"
+        justifyContent="center"
         direction="column"
         style={{ width: '300' }}
       >
         <p className="contact-header">
-          <div>
-            <a
-              href="https://clarusway.com/"
-              className="design"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <code>{'<Clarusway/> '}</code>
-            </a>
-          </div>
+          <a
+            href="https://clarusway.com/"
+            className="design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <code>{'<Clarusway/> '}</code>
+          </a>
+
           <span className="design header">design</span>
         </p>
         <h2 className="contact-header">Add Contact</h2>
 
         <Box style={{ backgroundColor: 'white', padding: '20px' }}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Stack spacing={3} direction="column">
               <TextField
                 variant="outlined"

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Table,
   TableCell,
@@ -6,13 +6,10 @@ import {
   TableHead,
   TableRow,
   TableBody,
-  Paper
-} from "@mui/material";
-
-
+  Paper,
+} from '@mui/material';
 
 const Contacts = () => {
- 
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -26,19 +23,16 @@ const Contacts = () => {
               <TableCell align="right">Delete</TableCell>
               <TableCell align="right">Edit</TableCell>
             </TableRow>
-          </TableHead>        
-         
-          <TableBody>           
-              <TableRow>
-              <TableCell textAlign="center"></TableCell>
-              <TableCell textAlign="center"></TableCell>
-              <TableCell textAlign="center"></TableCell> 
-              <TableCell textAlign="center">
-              </TableCell> 
-              <TableCell textAlign="center">
-              </TableCell> 
-             </TableRow>      
+          </TableHead>
 
+          <TableBody>
+            <TableRow>
+              <TableCell alignItems="center"></TableCell>
+              <TableCell alignItems="center"></TableCell>
+              <TableCell alignItems="center"></TableCell>
+              <TableCell alignItems="center"></TableCell>
+              <TableCell alignItems="center"></TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
@@ -47,4 +41,3 @@ const Contacts = () => {
 };
 
 export default Contacts;
-
