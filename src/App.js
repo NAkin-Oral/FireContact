@@ -1,4 +1,5 @@
 import './App.css';
+import { ToastContainer } from 'react-toastify';
 import Contacts from './components/contacts/Contacts';
 import FormComponent from './components/form/FormComponent';
 import { useState } from 'react';
@@ -24,12 +25,25 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
       <FormComponent
         info={info}
         setInfo={setInfo}
         handleSubmit={handleSubmit}
       />
       <Contacts editUser={editUser} />
+      <ToastContainer />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
   update,
 } from 'firebase/database';
 import { useEffect, useState } from 'react';
+import toastify from './toastify';
 
 export const AddUser = info => {
   const db = getDatabase(firebase);
@@ -19,6 +20,7 @@ export const AddUser = info => {
     phoneNumber: info.phoneNumber,
     gender: info.gender,
   });
+  toastify('added');
 };
 
 export const useFetch = () => {
