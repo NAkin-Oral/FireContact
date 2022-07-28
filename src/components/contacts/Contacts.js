@@ -12,7 +12,8 @@ import { useFetch, DeleteUser } from '../../utils/functions';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-const Contacts = () => {
+
+const Contacts = ({ editUser }) => {
   const { isLoading, contactList } = useFetch();
   return (
     <div>
@@ -52,18 +53,28 @@ const Contacts = () => {
                 // Bilgiler geldiği zaman aşağıya yazılacak kodlar çalışsın
                 contactList?.map((item, index) => (
                   <TableRow key={index}>
-                    <TableCell textAlign="center">
+                    <TableCell className="center">
                       {item.username.toUpperCase()}
                     </TableCell>
-                    <TableCell textAlign="center">{item.phoneNumber}</TableCell>
-                    <TableCell textAlign="center">{item.gender}</TableCell>
+                    <TableCell className="center">{item.phoneNumber}</TableCell>
+                    <TableCell className="center">{item.gender}</TableCell>
                     <TableCell
-                      textAlign="center"
+                      className="center"
                       onClick={() => DeleteUser(item.id)}
                     >
                       <DeleteIcon />
                     </TableCell>
-                    <TableCell textAlign="center">
+                    <TableCell
+                      className="center"
+                      onClick={() =>
+                        editUser(
+                          item.id,
+                          item.username,
+                          item.phoneNumber,
+                          item.gender
+                        )
+                      }
+                    >
                       <EditIcon />
                     </TableCell>
                   </TableRow>
