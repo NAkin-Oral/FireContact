@@ -75,6 +75,29 @@ code {
   border-radius: 5px;
 }
 
+.Add {
+  padding: 10px 100px;
+}
+
+.Delete,
+.Edit {
+  cursor: pointer;
+}
+
+.Delete:hover,
+.Edit:hover {
+  opacity: 0.6;
+  transition: all 0.5s ease-out;
+}
+
+.Delete {
+  color: rgb(116, 163, 23);
+}
+
+.Edit {
+  color: rgb(16, 132, 132);
+}
+
 .nothing-found {
   color: red;
 }

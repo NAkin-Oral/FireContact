@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from '@mui/icons-material';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 
-const FormComponent = ({ info, setInfo, handleSubmit }) => {
+const FormComponent = ({ info, setInfo, handleSubmit, update }) => {
   const handleChange = e => {
     e.preventDefault();
     // const name = e.target.name;
@@ -45,7 +45,7 @@ const FormComponent = ({ info, setInfo, handleSubmit }) => {
 
           <span className="design header">design</span>
         </p>
-        <h2 className="contact-header">Add Contact</h2>
+        <h2 className="contact-header Add">Add Contact</h2>
 
         <Box style={{ backgroundColor: 'white', padding: '20px' }}>
           <form onSubmit={handleSubmit}>
@@ -93,7 +93,8 @@ const FormComponent = ({ info, setInfo, handleSubmit }) => {
                 </Select>
               </FormControl>
               <Button variant="contained" type="submit" value="Submit">
-                ADD
+                {update && 'UPDATE'}
+                {!update && 'ADD'}
               </Button>
             </Stack>
           </form>

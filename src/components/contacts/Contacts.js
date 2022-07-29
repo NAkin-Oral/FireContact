@@ -62,7 +62,7 @@ const Contacts = ({ editUser }) => {
                       className="center"
                       onClick={() => DeleteUser(item.id)}
                     >
-                      <DeleteIcon />
+                      <DeleteIcon className="Delete" />
                     </TableCell>
                     <TableCell
                       className="center"
@@ -75,7 +75,7 @@ const Contacts = ({ editUser }) => {
                         )
                       }
                     >
-                      <EditIcon />
+                      <EditIcon className="Edit" />
                     </TableCell>
                   </TableRow>
                 ))
