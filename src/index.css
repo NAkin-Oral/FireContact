@@ -48,16 +48,6 @@ code {
   text-align: center;
 }
 
-.edit {
-  cursor: pointer;
-  color: green;
-}
-
-.delete {
-  cursor: pointer;
-  color: red;
-}
-
 .header {
   text-decoration: none;
   font-size: 1.5rem;
@@ -76,7 +66,7 @@ code {
 }
 
 .Add {
-  padding: 10px 100px;
+  padding: 10px 50px;
 }
 
 .Delete,

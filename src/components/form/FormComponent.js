@@ -35,12 +35,12 @@ const FormComponent = ({ info, setInfo, handleSubmit, update }) => {
       >
         <p className="contact-header">
           <a
-            href="https://clarusway.com/"
+            href="https://github.com/NAkin-Oral"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{'<Clarusway/> '}</code>
+            <code>{'<NAO/> '}</code>
           </a>
 
           <span className="design header">design</span>
