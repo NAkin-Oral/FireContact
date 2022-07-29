@@ -9,7 +9,7 @@ import {
   update,
 } from 'firebase/database';
 import { useEffect, useState } from 'react';
-import toastify from './toastify';
+import toastifySuccess, { toastifyInfo, toastifyWarn } from './toastify';
 
 export const AddUser = info => {
   const db = getDatabase(firebase);
@@ -20,7 +20,7 @@ export const AddUser = info => {
     phoneNumber: info.phoneNumber,
     gender: info.gender,
   });
-  toastify('added');
+  toastifySuccess('Added');
 };
 
 export const useFetch = () => {
@@ -46,11 +46,13 @@ export const useFetch = () => {
 export const DeleteUser = id => {
   const db = getDatabase(firebase);
   remove(ref(db, 'users/' + id));
+  toastifyWarn('Deleted');
 };
 
 export const UpdateUser = info => {
   const db = getDatabase(firebase);
   const updates = {};
   updates['users/' + info.id] = info;
+  toastifyInfo('Updated');
   return update(ref(db), updates);
 };
